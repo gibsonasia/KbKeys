@@ -41,9 +41,9 @@ public class Available {
         this.url = url;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [textColor = "+textColor+", name = "+name+", url = "+url+"]";
-    }
+//    @Override
+//    public String toString()
+//    {
+//        return "ClassPojo [textColor = "+textColor+", name = "+name+", url = "+url+"]";
+//    }
 }
