@@ -20,6 +20,7 @@ public class KeysAdapter extends RecyclerView.Adapter<KeysViewHolder> {
     JSONArray data;
 
     public KeysAdapter(){
+
         this.data = new JSONArray();
     }
 
@@ -35,6 +36,9 @@ public class KeysAdapter extends RecyclerView.Adapter<KeysViewHolder> {
             JSONObject object = data.getJSONObject(position);
             Available available = new Available();
             available.setName(object.getString("name"));
+            available.setTextColor(object.getString("textColor"));
+            available.setUrl(object.getString("url"));
+            //todo
             holder.bind(available);
         } catch (JSONException e) {
             e.printStackTrace();

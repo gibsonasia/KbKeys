@@ -15,6 +15,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        KeysFragment fragment = new KeysFragment();
+        ft.add(R.id.frag_container, fragment);
+        ft.commit();
+
+
 //         NOTE ADD FRAGMENT MANAGER!!
         //Intents
 

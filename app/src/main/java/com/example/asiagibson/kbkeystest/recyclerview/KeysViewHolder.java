@@ -20,7 +20,6 @@ public class KeysViewHolder extends RecyclerView.ViewHolder {
 
     public KeysViewHolder(View view) {
         super(view);
-
         textView =(TextView) itemView.findViewById(R.id.keys_tv);
 
     }
@@ -28,7 +27,7 @@ public class KeysViewHolder extends RecyclerView.ViewHolder {
     public void bind(Available available) {
 
         String name = available.getName();
-        textView.setText(name);
+        textView.setText(name + available.getTextColor() + available.getUrl());
         Toast.makeText(textView.getContext(), name, Toast.LENGTH_LONG).show();
 
     }

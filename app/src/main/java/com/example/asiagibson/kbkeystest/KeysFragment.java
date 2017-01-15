@@ -50,7 +50,8 @@ public class KeysFragment extends Fragment {
                         Log.d(TAG, response);
                         try {
                             JSONObject json = new JSONObject(response);
-                            JSONArray keys = json.optJSONArray("keys");
+                            Log.d(TAG, response);
+                            JSONArray keys = json.optJSONArray("available keys");
                             adapter.setData(keys);
                             adapter.notifyDataSetChanged();
 
